@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh_TW">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="內容最豐富的明星部落格集散地，精采圖文、影音、藝人行程應有盡有，還可收看線上直播與偶像即時互動，粉絲最愛的追星聖地，就是痞客邦娛樂丸！">
+<link rel="video_src" href="http://flash.pixfs.net/ewon/newyork_live_20110801.swf">
+<meta name="video_height" content="400">
+<meta name="video_width" content="480">
+<meta name="video_type" content="application/x-shockwave-flash">
+    <title>今日大明星 -  @ 娛樂丸 :: 痞客邦 PIXNET ::</title>
+    <link rel="stylesheet" href="//s.pixfs.net/channel/ewon/style2/style.css?v=a1d24b5aad85f709ea5e16152f36eee7" type="text/css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml" href="//s.pixfs.net/channel/ewon/opensearch.xml" title="PIXNET 娛樂丸" />
+</head>
+
+<body class="inner-page live-page">
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+<!--
+var pix = pix || {};
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+$(function(){
+    var username = window.prompt("Please input your name");
+    var ws = new WebSocket("ws://chatroom.pixnet.asia:8888", "chatroom");
+    $('#username').text('<' + username + '>');
+    ws.onmessage = function(event) {
+        var msg = JSON.parse(event.data);
+        var elmt = $('<tr>').append($('<td>').attr('width', '20%').text('<' + msg.username + '>'))
+                    .append($('<td>').text(msg.message));;
+        if (msg.message.toLowerCase().indexOf(username.toLowerCase()) !== -1) {
+            elmt.addClass('warning');
+        }
+        $('#chatroom').append(elmt);
+        $("div.chatroom").animate({scrollTop: $('.chatroom').height()}, 1000);
+    };
+    $('#chatbox').submit(function(){
+        ws.send(JSON.stringify({username: username, message: $('#input-message').val()}));
+        $('#input-message').val('');
+        return false;
+    });
+});
+
+//-->
+</script>
+<style>
+div.chatroom {
+display:block;
+width:100%;
+height:340px;
+overflow:scroll; 41 }
+</style>
+
+<div id="container">
+    <div id="container2">
+	<div id="header"><div id="header-1">
+	    <h1><a href="//channel.pixnet.net/ewon/"><span class="invisible">痞客邦 娛樂丸</span></a></h1>
+
+	    <ul id="pixnet-menu">
+        <li>
+    HI! <a id="menu-userid" href="http://jnlin.pixnet.net/blog" target="_blank">jnlin</a>!
+    <a href="http://panel.pixnet.cc/logout?done=http%3A%2F%2Fchannel.pixnet.net%2Fewon%2Fchatroom">(登出)</a><span class="separator">｜</span>
+    </li>
+    <li><a href="http://panel.pixnet.cc">管理後台</a><span class="separator">｜</span></li>
+        <li><a href="//www.pixnet.net/album">相簿</a><span class="separator">｜</span></li>
+    <li><a href="//www.pixnet.net/blog">部落格</a><span class="separator">｜</span></li>
+    <li><div id="menu-more" onMouseOver="document.getElementById('menu-extra').style.display='block'" onMouseOut="document.getElementById('menu-extra').style.display='none'">更多頻道▼	<ul class="menu-s" id="menu-extra" style="display:none">
+	    	    <li><a href="http://channel.pixnet.net/lovely">化妝台</a></li>
+	    	    <li><a href="http://channel.pixnet.net/movie">電影圈</a></li>
+	    	    <li><a href="http://channel.pixnet.net/sport">運動邦</a></li>
+	    	    <li><a href="http://channel.pixnet.net/nba">ＮＢＡ</a></li>
+	    	    <li><a href="http://channel.pixnet.net/mlb">ＭＬＢ</a></li>
+	    	    <li><a href="http://channel.pixnet.net/reading">讀創館</a></li>
+	    	    <li><a href="http://channel.pixnet.net/pixtv">痞ＴＶ</a></li>
+	    	    <li><a href="http://channel.pixnet.net/ewon">娛樂丸</a></li>
+	    	    <li><a href="http://channel.pixnet.net/inpo">公益家</a></li>
+	    	    <li><a href="http://channel.pixnet.net/pixbuy">痞一物</a></li>
+	    	</ul>
+    </div>
+    </li>
+    <li><span class="separator">｜</span><a href="//www.pixnet.net">首頁</a></li>
+</ul><!--login-->
+
+
+	    <ul id="navigation">
+		<li id="nav-1"><a href="//channel.pixnet.net/ewon/"><span class="invisible">首頁</span></a></li>
+		<li id="nav-2"><a href="//channel.pixnet.net/ewon/celebrity"><span class="invisible">娛樂名人堂</span></a></li>
+		<li id="nav-3"><a href="//channel.pixnet.net/ewon/info"><span class="invisible">娛樂即時通</span></a></li>
+		<li id="nav-4"><a href="//channel.pixnet.net/ewon/video"><span class="invisible">播放室</span></a></li>
+		<li id="nav-5"><a href="//channel.pixnet.net/ewon/music"><span class="invisible">星碟放送</span></a></li>
+		<li id="nav-6"><a href="//channel.pixnet.net/ewon/activity"><span class="invisible">好康送</span></a></li>
+				<li id="nav-7" class="extra"><a class="clickcounter" id="ewoneventtag-111" href="http://ewon.events.pixnet.net/event41" target="_blank">All Pass秘技</a></li>
+	    </ul><!--navigation-->
+
+	    	    <div id="search">
+		<form method="get" action="http://channel.pixnet.net/ewon/search">
+		    <input id="search-target" type="text" name="searchtext" />
+		    <input id="search-send" type="submit" value="搜尋" />
+		</form>
+		<div class="extra">熱門：
+		<a target="_blank" href="http://channel.pixnet.net/ewon/activity/view/912" class="clickcounter" id="ewonkeyword-96">李大仁</a>
+, 		<a target="_blank" href="http://channel.pixnet.net/ewon/celebrity/detail/easonchan" class="clickcounter" id="ewonkeyword-100">陳奕迅</a>
+, 		<a target="_blank" href="http://channel.pixnet.net/ewon/search?searchtext=%E8%98%87%E6%89%93%E7%B6%A0" class="clickcounter" id="ewonkeyword-102">蘇打綠</a>
+, 		<a target="_blank" href="http://channel.pixnet.net/ewon/activity/view/912" class="clickcounter" id="ewonkeyword-98">任家愷</a>
+		</div>
+	    </div>
+
+            <div id="header-expand-ad"></div>
+
+	    <ul id="text-ad">
+							    </ul>
+
+	</div><!--header-1--></div><!--header-->
+<script type="text/javascript" src="//s.pixfs.net/channel/js/bookmark.min.js?v=a1d24b5aad85f709ea5e16152f36eee7"></script>
+<div id="main">
+    <div id="left-column">
+	<div class="breadcrumb"><a href="//channel.pixnet.net/ewon/">娛樂丸</a> > <a href="//channel.pixnet.net/ewon/video">播放室</a> > 直播聊天室</div>
+
+
+	<div class="block block-live-window">
+	    <div class="block-text">
+		<h3 class="title">今日大明星： LIVE 直播</h3>
+		<div class="share">
+		    <div class="bookmark"><script type="text/javascript">pix && pix.bookmarkInit && pix.bookmarkInit('<span style="position:relative;top:-7px;">分享:</span>');</script></div>
+		</div>
+
+		<div class="live-window">
+		    <div class="chat-box" id="box-live">
+			<div id="chat-video" style="float:left">
+			    <div id="wrap">
+<script type="text/javascript">
+var ua = navigator.userAgent.toLowerCase(); 
+var isSafari = 0;
+if (ua.indexOf('safari') != -1 && ua.indexOf('chrome') <= -1) { 
+	isSafari = 1;
+}
+if (isSafari) {
+	$(function(){
+	var html = '<video poster="http://content.bitsontherun.com/thumbs/nfSyO85Q-320.jpg" height="315" width="400" controls> <source src="http://fms-mobile.pixnet.asia/live/nylivemobile/playlist.m3u8" type="application/vnd.apple.mpegurl" /> <p class="warning">Your browser does not support HTML5 video.</p> </video>';
+	$('#flashContentLive').html(html);
+	});
+} else {
+	var swfVersionStr = "10.2.153";
+	// xiSwfUrlStr 可用來定義快捷安裝程式 SWF。
+	var xiSwfUrlStr = "";
+	var flashvars = {};
+	flashvars.source="rtmp://60.199.248.187/live/nylive";//設定影片URL
+	// flashvars.source="rtmp://goldenmelody.live.pixcdn.tw/livepkgr/livestream?adbe-live-event=liveevent"
+	flashvars.autoplay="true";//是否自動播放
+	var params = {};
+	params.quality = "high";
+	params.bgcolor = "#3a434a";
+	params.play = "true";
+	params.loop = "true";
+	params.wmode = "window";
+	params.scale = "showall";
+	params.menu = "true";
+	params.devicefont = "false";
+	params.salign = "";
+	params.allowscriptaccess = "always";
+	params.allowFullScreen = "true";
+	var attributes = {};
+	attributes.id = "PixnetLivePlayer";
+	attributes.name = "PixnetLivePlayer";
+	attributes.align = "middle";
+	// swfobject.createCSS("html", "height:100%; background-color: #CCCCCC;");
+	// swfobject.createCSS("body", "margin:0; padding:0; overflow:hidden; height:100%;");
+	//使用swfobject生成flash時，是在此指定長寬
+	swfobject.embedSWF(
+			"http://flash.pixfs.net/liveplayer/PixnetLivePlayer-0830.swf", "flashContentLive",
+			"420", "315",
+			swfVersionStr, xiSwfUrlStr,
+			flashvars, params, attributes);
+}
+//播放
+function play(){
+	swfobject.getObjectById("PixnetLivePlayer").playVideo();
+}
+//停止
+function stop(){
+	swfobject.getObjectById("PixnetLivePlayer").stopVideo();
+}
+//設定Video URL
+function setSource(value){
+	swfobject.getObjectById("PixnetLivePlayer").setSource(value);
+}
+//設定Video 的自動播放 (要傳入字串的'true' or 'false')
+function setAutoPlay(target){
+	swfobject.getObjectById("PixnetLivePlayer").setAutoPlay(target.value.toString());
+}
+//設定大小只要對HTML上的Flash物件指定width,height即可
+function zoomInFlash(){
+	$(swfobject.getObjectById("PixnetLivePlayer")).width('1000px').height('600px')
+}
+function zoomOutFlash(){
+	$(swfobject.getObjectById("PixnetLivePlayer")).width('640px').height('357px')
+}
+//測試用，指定兩種不同的Video URL
+function playLive(){
+	setSource('rtmp://60.199.248.187/live/nylive');
+}
+function playProgress(){
+	setSource('http://mediapm.edgesuite.net/ovp/content/demo/video/elephants_dream/elephants_dream_768x428_24.0fps_608kbps.mp4');
+}
+//-->
+</script>
+
+				<div id="flashContentLive">
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash 播放程式" />
+					</a>
+					<p>此頁面需要 Flash Player 10.2.153 版或更新版本。</p>
+				</div>
+			    </div>
+			</div><!--chat-video-->
+
+			<div id="chat-room">
+<div class="chatroom">
+<table class="table table-striped" id="chatroom">
+</table>
+</div>
+<form id="chatbox" class="form-inline">
+<span id="username"></span> <input type="text" size="50" class="input-xlarge" id="input-message" placeholder="Say something"> <button type="submit" class="btn">Submit</button>
+</form>
+			</div><!--chat-room-->
+		    </div>
+		</div>
+	    </div>
+	</div><!--block-->
+		
+
+    </div><!--left-column-->
+</div><!--main-->
+
+
+<script type="text/javascript" src="//s.pixanalytics.com/js/c.js"></script>
+<script type="text/javascript"> var _type = 'channel_ewon_chatroom'; _uCount(); </script>
+
+	<div id="footer">
+    <a href="//panel.pixnet.cc/signup/step1">免費註冊</a>
+    <a target="_blank" href="//www.pixnet.net/regulation">服務條款</a>
+    <a target="_blank" href="//www.pixnet.net/privacy">隱私權政策</a>
+    <a target="_blank" href="//www.pixnet.net/sitemap">網站導覽</a>
+    <a target="_blank" href="//help.pixnet.tw">服務中心</a>
+    <a target="_blank" href="//www.pixnet.net/contact">聯絡我們</a>
+    <a target="_blank" href="//emkt.pixnet.net/blog">行銷合作</a>
+    <a target="_blank" href="//apps.pixnet.tw">開發人員(API)</a>
+    <a target="_blank" href="//www.pixnet.net/career">徵才訊息</a>
+    <a target="_blank" href="https://www.cmh.com.tw/sub_net.htm">城邦集團</a>
+    &nbsp;&nbsp;&copy; 2003 - 2013 PIXNET
+</div>
+    </div><!--container2-->
+</div><!--container-->
+
+<script type="text/javascript">
+<!--
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18822138-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+  var _gaq = _gaq || [];
+  _gaq.push(
+    ['_setAccount', 'UA-408650-10'],
+    ['_setDetectTitle', false],
+    ['_trackPageview', '/channel/ewon']
+  );
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//-->
+</script>
+
+<script type="text/javascript" src="//s.pixanalytics.com/js/c.js"></script>
+<script type="text/javascript"> var _type = 'channel_ewon'; _uCount(); </script>
+
+<script type="text/javascript">
+<!--
+    jQuery(function(){
+	jQuery.getScript('//ad.pixnet.net/field.php?fields[]=header-expand-ad,576&fields[]=%3Etext-ad,395&fields[]=%3Etext-ad,397&fields[]=%3Etext-ad,399');
+    });
+//-->
+</script>
+<script type="text/javascript" src="http://api.pixnet.cc/visit.php?timestamp=1365667793&random=25157692&position=channel_ewon&check=1247221986"></script>
+
+<script type="text/javascript">
+<!--
+(function(){
+    var js = document.createElement('script');
+    js.src = '//s.pixanalytics.com/js/l.min.js?v=3';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(js, s);
+})();
+//-->
+</script>
+
+</body>
+</html>
